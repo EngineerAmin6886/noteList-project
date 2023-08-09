@@ -1,0 +1,72 @@
+body {
+  background-color: rgb(25, 20, 61);
+}
+p {
+  color: white;
+}
+/* css code properties main-top [START] */
+#mian-top {
+  display: flex;
+}
+/* css code properties container-main-top [START] */
+#container-main-top {
+  display: flex;
+  margin: 0 auto;
+}
+/* css code properties image [START] */
+#image {
+  margin: 0 auto;
+  margin-top: 115px;
+}
+#image > img {
+  margin-left: 12px;
+  width: 100px;
+}
+/* css code properties image [END] */
+
+/* css code properties matn [START] */
+#matn img {
+  width: 15px;
+  vertical-align: middle;
+}
+/* css code properties matn [END] */
+/* css code properties container-main-top [END] */
+/* css code properties main-top [END] */
+
+
+
+/* css code proerties note [START] */
+#note {
+  display: flex;
+}
+/* css code properties container-note [START] */
+#container-note {
+  margin: 0 auto;
+}
+/* css code properties main [START] */
+#main {
+  display: flex;
+  margin: 0 auto;
+}
+/* css code properties save [START] */
+#save {
+  display: flex;
+}
+/* css code properties save [END] */
+/* css code properties main [END] */
+
+/* css code properties yaddasth [START] */
+#yaddasth{
+    text-align: center;
+}
+#yaddasth > h4{
+    color: white;
+}
+/* css code properties note-list [START] */
+#note-list{
+
+}
+/* css code properties note-list [END] */
+/* css code properties yaddasth [END] */
+/* css code properties container-note [END] */
+/* css code properties note [END] */
