@@ -4,6 +4,16 @@ body {
 p {
   color: white;
 }
+li{
+  background-color: rgb(58, 40, 218);
+  margin-top: 5px;
+}
+a:hover{
+  color: red;
+}
+span{
+  color: white;
+}
 /* css code properties main-top [START] */
 #mian-top {
   display: flex;
@@ -48,6 +58,11 @@ p {
   display: flex;
   margin: 0 auto;
 }
+
+#main > textarea{
+  resize: none;
+ }
+  
 /* css code properties save [START] */
 #save {
   display: flex;
