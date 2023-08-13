@@ -4,16 +4,38 @@ body {
 p {
   color: white;
 }
-li{
-  background-color: rgb(58, 40, 218);
-  margin-top: 5px;
+ul {
+  padding: 0px;
 }
-a:hover{
+/* css code properties li [START] */
+li {
+  background-color: rgb(58, 40, 218);
+  margin-top: 3px;
+  list-style-type: none;
+  border-radius: 3px;
+  text-align: right;
+  padding-right: 5px;
+}
+li > i {
+  font-size: 13px;
+}
+li > i:first-of-type:hover {
   color: red;
 }
-span{
+li > i:last-of-type {
+  padding-right: 270px;
+}
+li > i:last-of-type:hover {
+  color: yellow;
+}
+/* css code properties li [END] */
+
+/* css code properties span [START] */
+span {
   color: white;
 }
+/* css code properties span [END] */
+
 /* css code properties main-top [START] */
 #mian-top {
   display: flex;
@@ -43,8 +65,6 @@ span{
 /* css code properties container-main-top [END] */
 /* css code properties main-top [END] */
 
-
-
 /* css code proerties note [START] */
 #note {
   display: flex;
@@ -59,10 +79,10 @@ span{
   margin: 0 auto;
 }
 
-#main > textarea{
+#main > textarea {
   resize: none;
- }
-  
+}
+
 /* css code properties save [START] */
 #save {
   display: flex;
@@ -71,15 +91,14 @@ span{
 /* css code properties main [END] */
 
 /* css code properties yaddasth [START] */
-#yaddasth{
-    text-align: center;
+#yaddasth {
+  text-align: center;
 }
-#yaddasth > h4{
-    color: white;
+#yaddasth > h4 {
+  color: white;
 }
 /* css code properties note-list [START] */
-#note-list{
-
+#note-list {
 }
 /* css code properties note-list [END] */
 /* css code properties yaddasth [END] */
