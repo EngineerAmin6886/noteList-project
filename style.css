@@ -1,106 +1,131 @@
-body {
-  background-color: rgb(25, 20, 61);
+/* css code properties ha koli b safeh [START] */
+*{
+  margin: 0;
+  padding: 0;
+  font-family:'Poppins', sans-serif;
+  box-sizing:border-box;
 }
-p {
-  color: white;
+h4{
+  color: #002765;
 }
-ul {
-  padding: 0px;
+/* css code properties ha koli b safeh [END] */
+
+/* css code properties container [START] */
+#container{
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #153677, #4e085f);
+  padding: 10px;
 }
-/* css code properties li [START] */
-li {
-  background-color: rgb(58, 40, 218);
-  margin-top: 3px;
-  list-style-type: none;
-  border-radius: 3px;
-  text-align: right;
-  padding-right: 5px;
+
+/* css code properties note-app [START] */
+#note-app{
+  width: 100%;
+  max-width: 540px;
+  background-color: #fff;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
 }
-li > i {
-  font-size: 13px;
+#note-app > img{
+  width: 60px;
 }
-li > i:first-of-type:hover {
+/* css code properties note-app zir majmoeh H2 */
+#note-app > h2{
+  color: #002765;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* css code properties note-app IMG k zir majmoeh h2 ast */
+#note-app > h2 > img{
+  width: 22px;
+  margin-left: 10px;
+}
+
+/* css code properties row [START] */
+#row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #edeef0;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+/* css code properties row > input */
+input{
+  flex: 1;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding: 10px;
+  font-weight: 14px;
+}
+/* css code properties row > button */
+button{
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  background-color: rgb(43, 211, 43);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 40px;
+}
+/* css code properties row [END] */
+
+/* css code properties list-container > li[START] */
+ul > li{
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+/* css code properties ul > li(k shamel daireh to kali meseh) */
+ul > li::before{
+  content: '';
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(images/checd.png);
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 8px;
+}
+/* css code properties ul > li checked (k shamel kht ksedn ro matn miseh) */
+ul > li.checked{
+  color: #555;
+  text-decoration: line-through;
+}
+/* css code properties ul > li checked (k shamel aks tik zadeh ast) */
+ul > li.checked::before{
+  background-image: url(images/tik.png);
+}
+/* css code properties span [START] */
+ul > li > span{
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+ul > li > span:hover{
+  background-color: #edeef0;
   color: red;
 }
-li > i:last-of-type {
-  padding-right: 270px;
-}
-li > i:last-of-type:hover {
-  color: yellow;
-}
-/* css code properties li [END] */
-
-/* css code properties span [START] */
-span {
-  color: white;
-}
 /* css code properties span [END] */
+/* css code properties list-container [END] */
+/* css code properties note-app [END] */
+/* css code properties container [END] */
 
-/* css code properties main-top [START] */
-#mian-top {
-  display: flex;
-}
-/* css code properties container-main-top [START] */
-#container-main-top {
-  display: flex;
-  margin: 0 auto;
-}
-/* css code properties image [START] */
-#image {
-  margin: 0 auto;
-  margin-top: 115px;
-}
-#image > img {
-  margin-left: 12px;
-  width: 100px;
-}
-/* css code properties image [END] */
-
-/* css code properties matn [START] */
-#matn img {
-  width: 15px;
-  vertical-align: middle;
-}
-/* css code properties matn [END] */
-/* css code properties container-main-top [END] */
-/* css code properties main-top [END] */
-
-/* css code proerties note [START] */
-#note {
-  display: flex;
-}
-/* css code properties container-note [START] */
-#container-note {
-  margin: 0 auto;
-}
-/* css code properties main [START] */
-#main {
-  display: flex;
-  margin: 0 auto;
-}
-
-#main > textarea {
-  resize: none;
-}
-
-/* css code properties save [START] */
-#save {
-  display: flex;
-}
-/* css code properties save [END] */
-/* css code properties main [END] */
-
-/* css code properties yaddasth [START] */
-#yaddasth {
-  text-align: center;
-}
-#yaddasth > h4 {
-  color: white;
-}
-/* css code properties note-list [START] */
-#note-list {
-}
-/* css code properties note-list [END] */
-/* css code properties yaddasth [END] */
-/* css code properties container-note [END] */
-/* css code properties note [END] */

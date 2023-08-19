@@ -6,64 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>noteList-project</title>
-    <link rel="icon" href="images/todo.svg.svg">
+    <link rel="icon" href="images/note.svg">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="Linearicons-Free-v1.0.0/Linearicons-Free-v1.0.0/Web Font/style.css">
 </head>
 
 <body>
+    <!-- html code container [START] -->
+    <div id="container">
 
-    <!-- html code main-top [START] -->
-    <div id="main-top">
+        <!-- html code note-app [START] -->
+        <div id="note-app">
 
-        <!-- html code container-main-top -->
-        <div id="container-main-top">
+            <img src="images/note.svg">
 
-            <!-- html code image [START] -->
-            <div id="image">
-                <img src="images/todo.svg.svg" alt="">
+            <h2>noteList <img src="images/two.PNG"></h2>
 
-                <!-- html code matn [START] -->
-                <div id="matn">
-                    <p>Add Your List Here <img src="images/two.PNG"></p>
-                </div>
+            <!-- html code row [START] -->
+            <div id="row">
+                <input type="text" id="input-box" placeholder="Add your text">
+                <button onclick="addTask()">Add</button>
             </div>
+            <!-- html code row [END] -->
+
+            <!-- html code list-container [START] -->
+            <h4>My Notes</h4>
+            <ul id="list-container">
+                <!-- <li class="checked">tesk 1</li>
+                <li>tesk 2</li>
+                <li>tesk 3</li> -->
+            </ul>
+            <!-- html code list-container [END] -->
         </div>
+        <!-- html code note-app [END] -->
     </div>
-    <!-- html code main-top [END] -->
+    <!-- html code container [END] -->
 
-    <!-- html code note [START] -->
-    <div id="note">
-        <!-- html code container-note [START] -->
-        <div id="container-note">
-            <!-- html code main [START] -->
-            <form action="#" id="main">
-
-                <textarea name="" id="no" placeholder="یادداشت خود را بنویس" dir="rtl" cols="30" rows="3"></textarea>
-
-                <!-- html code save [START] -->
-                <div id="save">
-                    <input type="submit" value="CHECK LIST">
-                </div>
-            </form>
-
-            <!-- html code yaddasth [START] -->
-            <div id="yaddasth">
-                <h4>My Notes</h4>
-                <!-- html code note-list [START] -->
-                <div id="note-list">
-                    <ul>
-                        <li contenteditable="true" id="box"><i class="lnr lnr-trash"></i><i class="lnr lnr-pencil"></i>
-                            fbfd</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- html code properties note [END] -->
-
-
-    <!-- script code [START] -->
+    <!-- script code link app.js v link icon ha [START] -->
     <script src="app.js"></script>
     <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
 </body>

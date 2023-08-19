@@ -1,51 +1,64 @@
-// 1402-05-18
-// noteList-project
-// gr:Amin
-// discription: here we can write our daily notes.
+// select kardn input-box az html v rehktan o dar motghaer.
+const inputBox = document.getElementById("input-box");
 
-let main = document.querySelector("#main");
-let noteList = document.querySelector("#note-list");
+// select kardn list-container az html v rehktan o dar motghaer.
+const listContainer = document.getElementById("list-container");
 
-main.addEventListener("submit", newNote);
+// shakt function brai ezafeh kardn b  list-container.
+function addTask() {
+  // braeh vagty k input mon kali bod bhemon hosehdar bedeh.
+  if (inputBox.value === "") {
+    alert("باید یه چیزی بنویسی!");
 
-function newNote(e) {
-  e.preventDefault();
-  let userText = document.querySelector("#no").value;
+    // braeh vagty k to input chezi nvestim
+  } else {
+    // shakt element li v rehktan o da motghaer.
+    let li = document.createElement("li");
 
-  let span = document.createElement("span");
-  span.innerText = userText;
+    // neshan dadn text to input dar li.
+    li.innerHTML = inputBox.value;
 
-  let li = document.createElement("li");
-  li.appendChild(span);
+    // gharar dadn li dar list-container ya ul.
+    listContainer.appendChild(li);
 
-  let a = document.createElement("a");
-
-  a.classList.add("remove-note");
-
-  li.appendChild(a);
-
-  noteList.appendChild(li);
+    // sahkt element span v rehktan o dar motghaer.
+    let span = document.createElement("span");
+    // ezafeh kardn icon b span.
+    span.innerHTML = `<i class="lnr lnr-trash"></i>`;
+    // grar dadn span dar li.
+    li.appendChild(span);
+    alert("یادداشت شما با موفقیت ثبت شد.");
+  }
+  // braei reset kardn input.
+  inputBox.value = "";
+  // braeh save kardn.
+  saveData();
 }
 
+// shakt function braeh ul ya list-container
+listContainer.addEventListener(
+  "click",
+  function (e) {
+    // braeh kat khsedan ro li b maneh kar anjam sodeh.
+    if (e.target.tagName === "LI") {
+      e.target.classList.toggle("checked");
+      saveData();
 
+      // braeh delete kardan span ya li ya yaddasteh moredeh nazar.
+    } else if (e.target.tagName === "SPAN") {
+      e.target.parentElement.remove();
+      saveData();
+    }
+  },
+  false
+);
 
-
-
-
-
-
-
-
-
-
-
-
-// let save = document.querySelector("#save");
-// save.addEventListener("submit", saveList);
-
-// function saveList(ev) {
-//     ev.preventDefault();
-//   localStorage.setItem("noteList", "li");
-//   var myName = localStorage.getItem("noteList");
-//   myName;
-// }
+// braeh save kardan li ha dar hafezeh.
+function saveData() {
+  localStorage.setItem("data", listContainer.innerHTML);
+}
+// braeh nmaeseh li ha mogeh load kardan safeh.
+function showTask() {
+  listContainer.innerHTML = localStorage.getItem("data");
+}
+showTask();
